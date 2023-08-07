@@ -4,10 +4,15 @@ These are the best resources for System Design on the Internet.
 ## Video Processing
 
 Transcoding Videos at Scale: https://www.egnyte.com/blog/2018/12/transcoding-how-we-serve-videos-at-scale/
+1. Used separate video delivery service to scale it differently
 
 Facebook Video Broadcasting: https://engineering.fb.com/ios/under-the-hood-broadcasting-live-video-to-millions/
+1. RTMP for 2-3 seconds of latency instead of HLS streaming
 
 Netflix Video Encoding at Scale: https://netflixtechblog.com/high-quality-video-encoding-at-scale-d159db052746
+1. Bit-stream level and pixel level analysis for detecting errors in video encoding early on at source
+2. Temporal and Spatial Fingerpoints for matching it with the transcoded video.
+3. Issues could be picture corruption, inserted black frames, frame rate conversion, interlacing artifacts, frozen formats
 
 Netflix Shot based encoding: https://netflixtechblog.com/optimized-shot-based-encodes-now-streaming-4b9464204830
 
